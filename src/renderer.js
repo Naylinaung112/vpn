@@ -42,7 +42,7 @@ document.getElementById("serverName").addEventListener("click", () => {
       if (!configs) return;
       const configList = document.getElementById("configList");
       configList.innerHTML = "";
-      configs.forEach((config,index) => {
+      configs.forEach((config,index, array) => {
         const listItem = document.createElement("div");
         const listItemName = document.createElement("div");
         const listItemDeleteBtn = document.createElement("div");
@@ -57,9 +57,9 @@ document.getElementById("serverName").addEventListener("click", () => {
         listItem.append(listItemName, listItemDeleteBtn);
         configList.appendChild(listItem);
         listItemDelete.addEventListener("click", () => {
-          if (currentServerId !== config.id || index == 0 ) {
+          if (currentServerId !== config.id) {
             ipcRenderer.send("delete-server", config.id);
-          } else if (!isConnected) {
+          } else if (!isConnected || array.length == 0) {
             ipcRenderer.send("select-server", {
               id: "",
               remarks: "",

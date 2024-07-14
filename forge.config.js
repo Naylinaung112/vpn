@@ -4,7 +4,7 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: './src/tray_connected.png'
+    icon: './src/tray_connected.ico'
   },
   rebuildConfig: {},
   makers: [
@@ -12,7 +12,7 @@ module.exports = {
       name: "@electron-forge/maker-squirrel",
       config: {
         name: "Burmese Shield",
-        setupIcon: "./tray_connected.png",
+        setupIcon: "./src/tray_connected.ico",
         authors: 'kid123',
         description: 'VPN',
       },

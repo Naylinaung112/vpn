@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 const { v4 } = require("uuid");
 const { Base64 } = require("js-base64");
 

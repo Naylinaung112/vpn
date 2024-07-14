@@ -26,8 +26,8 @@ if (!fs.existsSync(configsDir)) {
   fs.mkdirSync(configsDir);
 }
 
-const connectedIcon = path.join(__dirname, "tray_connected.png"); // Icon for connected status
-const disconnectedIcon = path.join(__dirname, "tray_disconnected.png"); // Icon for disconnected status
+const connectedIcon = path.join(__dirname, "tray_connected.ico"); // Icon for connected status
+const disconnectedIcon = path.join(__dirname, "tray_disconnected.ico"); // Icon for disconnected status
 
 function createWindow() {
   const { workArea } = screen.getPrimaryDisplay();
