@@ -1,0 +1,197 @@
+body {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  justify-content: flex-end;
+  color: #5a5a5a;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+  fill: #5a5a5a;
+}
+#powerBtn {
+  fill: purple;
+  width: 50px;
+  height: 50px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+.container {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.status-container {
+  min-height: 40px;
+  margin-top: 10px;
+}
+.vpn-btn {
+  width: 80px;
+
+  height: 80px;
+  font-size: 40px;
+  color: purple;
+  position: relative;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-width: 1px;
+  border-color: #f1f1f1;
+  border-style: solid;
+  background-color: #f5f5f5;
+}
+.serverAlias {
+  padding: 10px;
+  flex-grow: 1;
+  cursor: pointer;
+}
+.add-btn {
+  color: black;
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  color: #fff;
+  display: flex;
+  border-bottom-left-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.model {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.addingModel {
+  display: none;
+}
+.slistModel {
+  display: inline;
+}
+.slist-container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  left: 0;
+  bottom: 60px;
+  z-index: 1;
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.list {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.model-list {
+  padding: 20px;
+}
+.list-name {
+  padding: 20px;
+  flex-grow: 1;
+
+}
+.delete-icon {
+  width: 15px;
+  height: 15px;
+  fill: #222;
+ 
+}
+.delete-btn {
+  height: 100%;
+  width: 40px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.selected-list {
+  background-color: purple;
+  color: white;
+}
+.list-container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  bottom: 60px;
+  z-index: 1;
+  right: 0;
+}
+.vpn-btn-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  display: none;
+}
+
+.ring {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2 solid purple;
+  border-radius: 50%;
+  animation: pulsate 1.5s infinite;
+  background-color: purple;
+}
+
+.ring:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.ring:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
